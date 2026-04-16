@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        "cabeca cabeca"
+        "braco corpo"
+        "peh peh";
+    grid-template-rows: 100px auto 100px;
+    grid-template-columns: 1fr 5fr;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: cabeca;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+aside {
+    grid-area: braco;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 20px;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu a {
+    display: inline-block;
+    background-color: rgb(255, 38, 0);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.logoo {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+main {
+    grid-area: corpo;
+    background-color: rgb(129, 128, 128);
+    padding: 20px;
+}
+
+aside {
+    grid-area: braco;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 20px;
+}
+
+footer {
+    grid-area: peh;
+    background-color: rgb(11, 11, 12);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mae {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.329);
+    width: 400px;
+    max-width: 90%;
+    height: auto;
+    min-height: 600px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 10px;
+}
+
+.produto {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.texto-informativo {
+    font-size: 1.1rem;
+    color: white;
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+.letra {
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+}
+
+.descricao,
+.preco {
+    font-size: x-large;
+    color: black;
+    margin: 5px 0;
+}
+
+.botao {
+    font-size: x-large;
+    background-color: rgb(255, 38, 0);
+    width: 200px;
+    border-radius: 30px;
+}
+
+.letra_botao {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        grid-template-areas:
+            "cabeca"
+            "braco"
+            "corpo"
+            "peh";
+        grid-template-rows: 100px 90px auto 100px;
+        grid-template-columns: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        grid-template-areas:
+            "cabeca"
+            "corpo"
+            "peh";
+        grid-template-rows: 100px auto 100px;
+        grid-template-columns: auto;
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+.copyright p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.8;
+}
